@@ -1,0 +1,31 @@
+﻿@model ListaDeTarefas.Models.Tarefas
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="tableDiv"></div>
+<div id="tarefasCriar">
+    @using (Ajax.BeginForm("AJAXCreate", "Tarefas", 
+        new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "tableDiv"
+    }))
+    {
+        <div class="form-group">
+            @Html.AntiForgeryToken()
+            <div>
+                @Html.EditorFor(model => model.Descrição, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Descrição, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Custom_Scripts/ConstruirTabela.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    }

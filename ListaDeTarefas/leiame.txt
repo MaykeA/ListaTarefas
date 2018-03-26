@@ -1,0 +1,6 @@
+Projeto de Organizador de Tarefas,
+Criador em ASP.Net MVC, com banco de dados Mysql, projeto inclui página inicial para introdução e a página do programa, onde pode se encontrar a Lista de Tarefas, contém um campo para inclusão da Tarefa desejada, e um checkbox se ela foi completa, se foi ela é riscada, senão, permanece em andamento.	
+Programa simples e prático, apresenta funções básicas para qualquer usuário, sendo possível excluir e editar as tarefas já incluidas, muitos simples de ser executado.
+
+
+By: Mayke Alves
